@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
 import { getProducts } from '@/app/lib/api';
-import ProductGrid from '../components/ProductGrid';
+import ProductGrid from './components/ProductGrid';
 import Pagination from '../components/Pagination';
 
 export default async function Home({ searchParams }) {
