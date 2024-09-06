@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { getProductById } from '../../lib/api';
+import { getProductById } from '@/app/lib/api';
 
 export default function ProductPage() {
     const router = useRouter();
