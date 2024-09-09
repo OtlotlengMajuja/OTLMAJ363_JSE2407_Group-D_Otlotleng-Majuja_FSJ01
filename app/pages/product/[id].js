@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { getProductById } from '@/app/lib/api';
+import Image from 'next/image';
 
 export default function ProductPage() {
     const router = useRouter();
@@ -36,7 +37,7 @@ export default function ProductPage() {
             <p>Price: ${product.price}</p>
             <p>Category: {product.category}</p>
             <p>Rating: {product.rating}</p>
-            <img src={product.thumbnail} alt={product.title} />
+            <Image src={product.thumbnail} alt={product.title} />
         </div>
     );
 }

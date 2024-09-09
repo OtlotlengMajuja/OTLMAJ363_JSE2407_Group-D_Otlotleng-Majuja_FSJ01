@@ -1,5 +1,7 @@
+"use client"
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProductCard({ product }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,7 +21,7 @@ export default function ProductCard({ product }) {
     return (
         <div className="border p-4 rounded shadow hover:shadow-md transition-shadow">
             <div className="relative">
-                <img
+                <Image
                     src={product.images[currentImageIndex]}
                     alt={product.title}
                     className="w-full h-48 object-cover mb-2"

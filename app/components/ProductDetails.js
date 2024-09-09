@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProductDetails({ product }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -21,7 +22,7 @@ export default function ProductDetails({ product }) {
             <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="relative">
-                    <img
+                    <Image
                         src={product.images[currentImageIndex]}
                         alt={product.title}
                         className="w-full h-96 object-cover rounded"
