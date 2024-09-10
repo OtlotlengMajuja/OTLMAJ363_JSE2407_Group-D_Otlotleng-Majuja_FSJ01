@@ -20,7 +20,7 @@ export async function getProductById(id) {
     }
     const product = await response.json();
 
-    product.tags = ['electronics', 'gadget']; // Example tags
+    product.tags = ['electronics', 'gadget'];
     product.stock = Math.floor(Math.random() * 100); // Random stock between 0 and 99
     product.reviews = [
         {
@@ -38,12 +38,4 @@ export async function getProductById(id) {
     ];
 
     return product;
-}
-
-export async function getCategories() {
-    const response = await fetch(`${API_BASE_URL}/products/categories`);
-    if (!response.ok) {
-        throw new Error('Failed to fetch categories');
-    }
-    return response.json();
 }
