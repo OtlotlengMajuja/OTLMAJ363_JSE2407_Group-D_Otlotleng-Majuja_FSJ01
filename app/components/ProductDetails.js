@@ -1,6 +1,8 @@
+"use client"
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ProductDetails({ product }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,6 +21,9 @@ export default function ProductDetails({ product }) {
 
     return (
         <div>
+            <Link href="/" className="text-blue-500 hover:underline mb-4 inline-block">
+                &larr; Back to Products
+            </Link>
             <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="relative">
@@ -45,10 +50,21 @@ export default function ProductDetails({ product }) {
                     )}
                 </div>
                 <div>
-                    <p className="text-xl mb-2">${product.price}</p>
+                    <p className="text-2xl font-bold mb-2">${product.price}</p>
                     <p className="text-gray-600 mb-4">{product.description}</p>
-                    <p className="mb-2">Category: {product.category}</p>
-                    <p>Rating: {product.rating}</p>
+                    <p className="mb-2"><strong>Category:</strong> {product.category}</p>
+                    <p className="mb-2"><strong>Tags:</strong> {product.tags.join(', ')}</p>
+                    <p className="mb-2"><strong>Rating: </strong>{product.rating}</p>
+                    <p className="mb-4"><strong>Stock:</strong> {product.stock > 0 ? `${product.stock} available` : 'Out of stock'}</p>
+
+                    <h3 className="text-xl font-semibold mb-2">Reviews</h3>
+                    {product.reviews.map((review, index) => (
+                        <div key={index} className="border-t py-2">
+                            <p><strong>{review.name}</strong> - {new Date(review.date).toLocaleDateString()}</p>
+                            <p>Rating: {review.rating} / 5</p>
+                            <p>{review.comment}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
