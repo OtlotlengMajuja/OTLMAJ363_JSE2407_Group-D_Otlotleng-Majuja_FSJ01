@@ -11,11 +11,12 @@ export default async function Home({ searchParams }) {
   let error = null;
 
   try {
-    products = await getProducts(page);
+    const response = await getProducts(page, limit);
     products = response.products;
     totalProducts = response.total;
   } catch (err) {
     error = err.message;
+    console.error('Error fetching products:', err);
   }
 
   const totalPages = Math.ceil(totalProducts / limit);
@@ -30,7 +31,9 @@ export default async function Home({ searchParams }) {
           <Suspense fallback={<div>Loading products...</div>}>
             <ProductGrid products={products} />
           </Suspense>
-          <Pagination currentPage={page} totalPages={totalPages} />
+          {totalPages > 0 && (
+            <Pagination currentPage={page} totalPages={totalPages} />
+          )}
         </>
       )}
     </div>

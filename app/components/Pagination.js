@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Pagination({ currentPage }) {
+export default function Pagination({ currentPage, totalPages }) {
     const maxVisiblePages = 5;
     const pageNumbers = [];
 
@@ -36,8 +36,8 @@ export default function Pagination({ currentPage }) {
                     key={number}
                     href={`/?page=${number}`}
                     className={`px-3 py-2 rounded transition-colors ${number === currentPage
-                            ? 'bg-blue-500 text-white'
-                            : 'bg-gray-200 hover:bg-gray-300'
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-gray-200 hover:bg-gray-300'
                         }`}
                 >
                     {number}
