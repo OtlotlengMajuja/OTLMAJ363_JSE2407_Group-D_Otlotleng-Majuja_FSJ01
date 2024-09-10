@@ -30,6 +30,8 @@ export default function ProductDetails({ product }) {
                     <Image
                         src={product.images[currentImageIndex]}
                         alt={product.title}
+                        width={500}
+                        height={500}
                         className="w-full h-96 object-cover rounded"
                     />
                     {product.images.length > 1 && (

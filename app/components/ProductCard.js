@@ -24,6 +24,8 @@ export default function ProductCard({ product }) {
                 <Image
                     src={product.images[currentImageIndex]}
                     alt={product.title}
+                    width={300}
+                    height={200}
                     className="w-full h-48 object-cover mb-2"
                 />
                 {product.images.length > 1 && (
