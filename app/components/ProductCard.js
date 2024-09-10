@@ -29,13 +29,13 @@ export default function ProductCard({ product }) {
                 {product.images.length > 1 && (
                     <>
                         <button
-                            onClick={(e) => { e.preventDefault(); prevImage(); }}
+                            onClick={prevImage}
                             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-r"
                         >
                             <ChevronLeft size={20} />
                         </button>
                         <button
-                            onClick={(e) => { e.preventDefault(); nextImage(); }}
+                            onClick={nextImage}
                             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-l"
                         >
                             <ChevronRight size={20} />
@@ -46,6 +46,7 @@ export default function ProductCard({ product }) {
             <h2 className="text-lg font-semibold">{product.title}</h2>
             <p className="text-gray-600">${product.price}</p>
             <p className="text-sm text-gray-500">Category: {product.category}</p>
+            <p className="text-sm text-gray-500">Stock: {product.stock}</p>
         </div>
     );
 }
