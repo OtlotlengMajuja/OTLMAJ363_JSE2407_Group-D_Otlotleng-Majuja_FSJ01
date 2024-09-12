@@ -10,8 +10,8 @@ export default async function ProductPage({ params }) {
 
     try {
         product = await getProductById(id);
-    } catch (e) {
-        error = e.message;
+    } catch (error) {
+        error = error.message;
     }
 
     if (error) {
@@ -35,7 +35,7 @@ export default async function ProductPage({ params }) {
                         d="M15 19l-7-7 7-7"
                     />
                 </svg>
-                <span className="font-semibold">Go Back</span>
+                <span className="font-semibold">Return</span>
             </Link>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">

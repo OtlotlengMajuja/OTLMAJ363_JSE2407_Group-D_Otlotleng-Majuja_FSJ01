@@ -5,7 +5,7 @@ export default function Header() {
         <header className="bg-gradient-to-r from-indigo-600 to-purple-600 shadow-md">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
                 <Link href="/" className="flex items-center">
-                    <span className="font-['Dancing_Script'] text-3xl text-white">QuickCart Emporium</span>
+                    <span className="font-['Anek_Devanagari'] text-3xl text-white">Shopporium</span>
                 </Link>
                 <nav>
                     <ul className="flex space-x-6">
