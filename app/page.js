@@ -1,5 +1,5 @@
 import { fetchProducts } from './api';
-import ProductGrid from './components/ProductGrid';
+import ProductGrid from './components/productGrid';
 import Pagination from './components/pagination';
 
 export default async function Home({ searchParams }) {

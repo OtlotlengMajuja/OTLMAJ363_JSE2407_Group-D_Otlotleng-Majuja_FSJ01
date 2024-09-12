@@ -9,7 +9,7 @@ export default function Loading() {
                     </svg>
                 </div>
             </div>
-            <p className="mt-6 text-indigo-800 text-xl font-semibold animate-pulse">Loading amazing products...</p>
+            <p className="mt-6 text-indigo-800 text-xl font-semibold animate-pulse">Loading products...</p>
         </div>
     );
 }
