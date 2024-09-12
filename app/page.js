@@ -1,4 +1,4 @@
-import { fetchProducts } from './api';
+import { getProducts } from './lib/api';
 import ProductGrid from './components/productGrid';
 import Pagination from './components/pagination';
 
@@ -8,7 +8,7 @@ export default async function Home({ searchParams }) {
   let error;
 
   try {
-    products = await fetchProducts(page);
+    products = await getProducts(page);
   } catch (e) {
     error = e.message;
   }

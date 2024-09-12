@@ -1,4 +1,4 @@
-import { fetchProductById } from '../../api';
+import { getProductById } from '@/app/lib/api';
 import Link from 'next/link';
 import ImageGallery from '@/app/components/gallery';
 import Reviews from '@/app/components/reviews';
@@ -9,7 +9,7 @@ export default async function ProductPage({ params }) {
     let error;
 
     try {
-        product = await fetchProductById(id);
+        product = await getProductById(id);
     } catch (e) {
         error = e.message;
     }
