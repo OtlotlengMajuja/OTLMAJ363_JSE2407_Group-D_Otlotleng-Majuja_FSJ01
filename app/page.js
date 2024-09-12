@@ -1,6 +1,6 @@
 import { fetchProducts } from './api';
 import ProductGrid from './components/ProductGrid';
-import Pagination from './components/Pagination';
+import Pagination from './components/pagination';
 
 export default async function Home({ searchParams }) {
   const page = Number(searchParams.page) || 1;

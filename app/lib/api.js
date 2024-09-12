@@ -6,11 +6,7 @@ export async function getProducts(page = 1, limit = 20) {
     if (!response.ok) {
         throw new Error('Failed to fetch products');
     }
-    const data = await response.json();
-    return {
-        products: data.products,
-        total: data.total
-    };
+    return response.json();
 }
 
 export async function getProductById(id) {
@@ -18,24 +14,5 @@ export async function getProductById(id) {
     if (!response.ok) {
         throw new Error('Failed to fetch product');
     }
-    const product = await response.json();
-
-    product.tags = ['electronics', 'gadget'];
-    product.stock = Math.floor(Math.random() * 100); // Random stock between 0 and 99
-    product.reviews = [
-        {
-            name: 'John Doe',
-            date: '2023-09-15',
-            rating: 4,
-            comment: 'Great product, works as expected!'
-        },
-        {
-            name: 'Jane Smith',
-            date: '2023-10-02',
-            rating: 5,
-            comment: 'Excellent quality and fast shipping.'
-        }
-    ];
-
-    return product;
+    return response.json();
 }
