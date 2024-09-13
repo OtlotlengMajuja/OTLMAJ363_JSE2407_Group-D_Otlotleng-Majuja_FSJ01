@@ -1,4 +1,4 @@
-# JSF04 - Extended Vue.js E-Commerce Store Features
+# FSJ01 - Challenge 1
 
 ## Project Brief
 
@@ -61,19 +61,9 @@ One of our primary goals was to improve the overall user journey, and we achieve
 3. **Running the project**
    - to start the development server run `npm run dev`
 
-## Acknowledgements
-
-I would like to acknowledge the resources that were helpful during the development process. These include:
-
-### AI
-
-- BlackBox AI to generate some of my commit messages.
-- ChatGPT to help me understand errors that were persistent.
-
 ### Resources
 
-- Vue.js documentation:
-  - Class and style bindings [https://vuejs.org/guide/essentials/class-and-style.html]
-  - Template refs [https://vuejs.org/guide/essentials/template-refs.html]
-
-**Project explainer video:** [https://youtu.be/-FBgmAYQo4E]
+- Next.js documentation:
+  - Building your application [https://nextjs.org/docs/app/building-your-application]
+  - Routing fundamentals [https://nextjs.org/docs/app/building-your-application/routing]
+  - Data fetching [https://nextjs.org/docs/app/building-your-application/data-fetching]
