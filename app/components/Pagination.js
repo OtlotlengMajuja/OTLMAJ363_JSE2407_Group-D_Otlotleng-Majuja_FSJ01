@@ -9,7 +9,7 @@ export default function Pagination({ currentPage, totalPages }) {
                     Previous
                 </Link>
             )}
-            <span className="text-green-800 font-semibold">Page {currentPage}</span>
+            <span className="text-black font-semibold">Page {currentPage}</span>
             {hasMore && (
                 <Link href={`/?page=${currentPage + 1}`} className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">
                     Next
