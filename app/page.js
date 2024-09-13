@@ -1,11 +1,13 @@
 import { getProducts } from './lib/api';
 import ProductGrid from './components/productGrid';
 import Pagination from './components/pagination';
+import { Suspense } from 'react';
 
 export default async function Home({ searchParams }) {
   const page = Number(searchParams.page) || 1;
   let products;
   let error;
+  let totalPages;
 
   try {
     products = await getProducts(page);
@@ -19,8 +21,10 @@ export default async function Home({ searchParams }) {
 
   return (
     <div>
-      <ProductGrid products={products} />
-      <Pagination currentPage={page} hasMore={products.length === 20} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProductGrid products={products} />
+        <Pagination currentPage={page} hasMore={products.length === 20} />
+      </Suspense>
     </div>
   );
 }

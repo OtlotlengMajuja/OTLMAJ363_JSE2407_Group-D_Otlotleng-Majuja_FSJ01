@@ -21,7 +21,7 @@ export default async function ProductPage({ params }) {
     return (
         <div className="py-12">
             <Link href="/" className="flex items-center space-x-2 text-green-600 hover:text-green-800 mb-8 transition-colors duration-300">
-                <button className='bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition-colors duration-300 mt-4 ml-2'>Return</button>
+                <button className='bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition-colors duration-300 mt-4 ml-2'>Back to products</button>
             </Link>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -37,7 +37,6 @@ export default async function ProductPage({ params }) {
                         <h2 className="text-2xl font-bold mb-4 text-black">{product.title}</h2>
                         <p className="text-black mb-4">{product.description}</p>
                         <p className="text-xl font-semibold text-green-800 mb-4">R{product.price.toFixed(2)}</p>
-
                         <p className="font-semibold text-black mb-4">Category: {product.category}</p>
                         <div className="mb-4">
                             {product.tags.map((tag, index) => (
