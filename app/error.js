@@ -2,10 +2,10 @@
 
 export default function Error({ error, reset }) {
     return (
-        <div>
-            <h2>Something went wrong!</h2>
+        <div className="text-center">
+            <h2 className="font-bold">Something went wrong..</h2>
             <p>{error.message}</p>
-            <button onClick={reset}>Please try again later</button>
+            <button onClick={reset} className="font-bold">Please try again later</button>
         </div>
     );
 }

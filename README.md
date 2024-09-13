@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JSF04 - Extended Vue.js E-Commerce Store Features
 
-## Getting Started
+## Project Brief
 
-First, run the development server:
+In this project, we set out to transform a basic e-commerce store built with Vue.js and Tailwind CSS into a feature-rich and user-friendly online shopping destination. The challenge was to identify and address any existing issues, while also extending the functionality to provide a truly seamless and engaging shopping experience for our users.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Link to hosted application:** [https://emercom-shopping.vercel.app/]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Unlocking the Power of Vue.js
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+At the core of our e-commerce store lies the powerful Vue.js framework, which allowed us to build a modern and responsive user interface. By leveraging Vue Router for navigation and Vuex for state management, we were able to create a smooth and efficient shopping experience, with dynamic content and seamless transitions between pages.
 
-## Learn More
+### Enhancing the User Journey
 
-To learn more about Next.js, take a look at the following resources:
+One of our primary goals was to improve the overall user journey, and we achieved this by introducing several key features:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Secure Login:** We implemented a functional and responsive login page, integrating JWT Decode for an authentication system that ensures the security and privacy of user data.
+2. **Comprehensive Shopping Cart:** Customers can now easily add products to their shopping cart, view the cart's contents, and manage their purchases with complete control.
+3. **Intelligent Comparison List:** Users can conveniently compare products, side-by-side, to make informed purchasing decisions.
+4. **Personalized Wishlist:** The addition of a wishlist feature allows customers to save their favorite products for future consideration.
+5. **Ratings and Reviews:** Shoppers can now share their experiences by leaving ratings and reviews for the products they've purchased, fostering a sense of community and trust.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Link to code:** [https://github.com/OtlotlengMajuja/JSF-Portfolio_Piece_OTLMAJ363_JSE2401_GroupD_Otlotleng-Majuja_JSF04.git]
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Vue.js 3:** The progressive JavaScript framework for building user interfaces.
+- **Vue Router:** For handling navigation and routing within the application.
+- **Vuex:** For state management across components.
+- **Tailwind CSS:** A utility-first CSS framework for designing responsive layouts.
+- **JSDoc:** For documenting the JavaScript code.
+- **Fake Store API:** For fetching product data and categories.
+- **JWT Decode:** Used for an authentication system and can also be used for information exchange. The token is mainly composed of header, payload, signature.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Features
+
+- Responsive navigation bar
+- Functional and responsive login page.
+- Product listing with filtering by category and sorting by price
+- Detailed product view with the ability to add to cart, comparison list and wishlist, as well as a section to write and see ratings and reviews.
+- Fully functional shopping cart, comparison list, and wishlist.
+- Integration with a fake store API for demonstration purposes
+- Responsive design to ensure a seamless user experience across all devices
+
+## Setup instructions
+
+### Prerequisites
+
+- Node.js (14 or higher)
+- npm (v6 or higher) or yarn (v1.22 or higher)
+
+### Installation
+
+1. **Clone the repository:**
+   - Open your terminal and select powershell.
+   - git clone `https://github.com/OtlotlengMajuja/JSF-Portfolio_Piece_OTLMAJ363_JSE2401_GroupD_Otlotleng-Majuja_JSF04.git`
+2. **Install dependencies:**
+   - using `npm install`
+3. **Running the project**
+   - to start the development server run `npm run dev`
+
+## Acknowledgements
+
+I would like to acknowledge the resources that were helpful during the development process. These include:
+
+### AI
+
+- BlackBox AI to generate some of my commit messages.
+- ChatGPT to help me understand errors that were persistent.
+
+### Resources
+
+- Vue.js documentation:
+  - Class and style bindings [https://vuejs.org/guide/essentials/class-and-style.html]
+  - Template refs [https://vuejs.org/guide/essentials/template-refs.html]
+
+**Project explainer video:** [https://youtu.be/-FBgmAYQo4E]

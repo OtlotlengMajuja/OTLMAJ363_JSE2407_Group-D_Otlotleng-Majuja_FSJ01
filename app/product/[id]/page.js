@@ -44,22 +44,22 @@ export default async function ProductPage({ params }) {
                         <ImageGallery images={product.images} />
                     </div>
                     <div className="md:w-1/2 p-8">
-                        <h1 className="text-3xl font-bold mb-4 text-gray-800">{product.title}</h1>
-                        <p className="text-2xl font-semibold text-indigo-600 mb-4">${product.price.toFixed(2)}</p>
-                        <p className="text-gray-700 mb-6">{product.description}</p>
-                        <p className="text-sm text-gray-600 mb-2">Category: {product.category}</p>
+                        <h1 className="text-3xl font-bold mb-4 text-black">{product.title}</h1>
+                        <p className="text-2xl font-semibold text-green-600 mb-4">${product.price.toFixed(2)}</p>
+                        <p className="text-black mb-6">{product.description}</p>
+                        <p className="text-sm text-black mb-2">Category: {product.category}</p>
                         <div className="mb-4">
                             {product.tags.map((tag, index) => (
                                 <span
                                     key={index}
-                                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                                    className="inline-block bg-black rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2"
                                 >
                                     {tag}
                                 </span>
                             ))}
                         </div>
-                        <p className="text-sm text-gray-600 mb-2">Rating: {product.rating} / 5</p>
-                        <p className="text-sm text-gray-600 mb-4">
+                        <p className="text-sm text-black mb-2">Rating: {product.rating} / 5</p>
+                        <p className="text-sm text-black mb-4">
                             Stock: {product.stock}
                             {product.stock > 0 ? (
                                 <span className="text-green-600 ml-2">(In Stock)</span>
@@ -67,7 +67,7 @@ export default async function ProductPage({ params }) {
                                 <span className="text-red-600 ml-2">(Out of Stock)</span>
                             )}
                         </p>
-                        <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">
+                        <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">
                             Add to Cart
                         </button>
                     </div>
