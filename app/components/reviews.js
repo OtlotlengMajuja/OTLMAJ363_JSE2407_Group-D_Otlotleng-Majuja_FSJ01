@@ -1,12 +1,12 @@
 export default function Reviews({ reviews }) {
     return (
-        <div className="mt-12">
-            <h2 className="text-3xl font-bold mb-6 text-green-800">Customer reviews:</h2>
+        <div className="mt-12 p-8 border-t">
+            <h3 className="text-xl font-bold mb-4 text-green-800">Customer reviews:</h3>
             <div className="space-y-6">
                 {reviews.map((review, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-md p-6 transition-transform duration-300 hover:scale-105">
                         <div className="flex justify-between items-center mb-4">
-                            <span className="font-semibold text-lg text-green-700">{review.reviewerName}</span>
+                            <span className="font-semibold text-lg text-black">{review.reviewerName}</span>
                             <span className="text-sm text-green-600">{new Date(review.date).toLocaleDateString()}</span>
                         </div>
                         <div className="flex items-center mb-2">

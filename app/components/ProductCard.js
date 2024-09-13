@@ -22,7 +22,7 @@ export default function ProductCard({ product }) {
     };
 
     return (
-        <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <Link href={`/product/${product.id}`}>
                 <div className="relative">
                     <Image
@@ -50,10 +50,11 @@ export default function ProductCard({ product }) {
                     )}
                 </div>
                 <div className="p-4">
-                    <h2 className="text-xl font-semibold text-black mb-2 truncate">{product.title}</h2>
+                    <h2 className="text-xl font-bold mb-4 text-black">{product.title}</h2>
+                    <p className="inline-block font-semibold bg-green-700 rounded-full px-3 py-1 text-sm text-white mr-2 mb-2">{product.category}</p>
                     <div className="flex justify-between items-center">
                         <span className="text-2xl font-bold text-black">R{product.price.toFixed(2)}</span>
-                        <button className="bg-black hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">
+                        <button className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition-colors duration-300 mt-4 ml-2">
                             View Details
                         </button>
                     </div>

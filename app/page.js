@@ -19,7 +19,6 @@ export default async function Home({ searchParams }) {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold text-green-800 mb-8 text-center">Explore all our options</h1>
       <ProductGrid products={products} />
       <Pagination currentPage={page} hasMore={products.length === 20} />
     </div>

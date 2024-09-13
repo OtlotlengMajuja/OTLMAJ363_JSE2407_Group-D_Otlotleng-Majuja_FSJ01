@@ -20,39 +20,30 @@ export default async function ProductPage({ params }) {
 
     return (
         <div className="py-12">
-            <Link href="/" className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 mb-8 transition-colors duration-300">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M15 19l-7-7 7-7"
-                    />
-                </svg>
-                <span className="font-semibold">Return</span>
+            <Link href="/" className="flex items-center space-x-2 text-green-600 hover:text-green-800 mb-8 transition-colors duration-300">
+                <button className='bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition-colors duration-300 mt-4 ml-2'>Return</button>
             </Link>
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="md:flex">
                     <div className="md:w-1/2">
-                        <ImageGallery images={product.images} />
+                        {product.images && product.images.length > 0 ? (
+                            <ImageGallery images={product.images} />
+                        ) : (
+                            <div className="p-4">No images available</div>
+                        )}
                     </div>
                     <div className="md:w-1/2 p-8">
-                        <h1 className="text-3xl font-bold mb-4 text-black">{product.title}</h1>
-                        <p className="text-2xl font-semibold text-green-600 mb-4">${product.price.toFixed(2)}</p>
-                        <p className="text-black mb-6">{product.description}</p>
-                        <p className="text-sm text-black mb-2">Category: {product.category}</p>
+                        <h2 className="text-2xl font-bold mb-4 text-black">{product.title}</h2>
+                        <p className="text-black mb-4">{product.description}</p>
+                        <p className="text-xl font-semibold text-green-800 mb-4">R{product.price.toFixed(2)}</p>
+
+                        <p className="font-semibold text-black mb-4">Category: {product.category}</p>
                         <div className="mb-4">
                             {product.tags.map((tag, index) => (
                                 <span
                                     key={index}
-                                    className="inline-block bg-black rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2"
+                                    className="inline-block bg-green-800 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2"
                                 >
                                     {tag}
                                 </span>
@@ -67,13 +58,13 @@ export default async function ProductPage({ params }) {
                                 <span className="text-red-600 ml-2">(Out of Stock)</span>
                             )}
                         </p>
-                        <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">
+                        <button className="bg-black hover:bg-green-800 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">
                             Add to Cart
                         </button>
                     </div>
                 </div>
+                <Reviews reviews={product.reviews} />
             </div>
-            <Reviews reviews={product.reviews} />
         </div>
     );
 }
